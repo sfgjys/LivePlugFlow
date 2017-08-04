@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/rtmpTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="请输入rtmp服务器的地址"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/rtmpUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rtmpTxt"
+            android:text="" />
+
+        <Button
+            android:id="@+id/connectBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rtmpUrl"
+            android:layout_marginTop="10dp"
+            android:text="准备直播" />
+
+        <RadioGroup
+            android:id="@+id/resolution_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/connectBT"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radiobutton0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="24P" />
+
+            <RadioButton
+                android:id="@+id/radiobutton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="36P" />
+
+            <RadioButton
+                android:id="@+id/radiobutton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="48P" />
+
+            <RadioButton
+                android:id="@+id/radiobutton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="54P" />
+
+            <RadioButton
+                android:id="@+id/radiobutton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="72P" />
+
+            <RadioButton
+                android:id="@+id/radiobutton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="108P" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rotation_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resolution_group"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/screenOrientation1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="横屏" />
+
+            <RadioButton
+                android:id="@+id/screenOrientation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="竖屏" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/audio_group"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/rotation_group">
+
+            <CheckBox
+                android:id="@+id/front_camera_mirror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="前置摄像头镜像" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_frame_rate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/audio_group"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="帧率" />
+
+            <EditText
+                android:id="@+id/et_frame_rate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:hint="帧率必须是0~30之间"
+                android:inputType="number"
+                android:text="30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_bitrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_frame_rate"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_min_bitrate"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="min bitrate"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="500" />
+
+            <EditText
+                android:id="@+id/et_max_bitrate"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="max bitrate"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="800" />
+
+            <EditText
+                android:id="@+id/et_best_bitrate"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="best bitrate"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="600" />
+
+            <EditText
+                android:id="@+id/et_init_bitrate"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="initial bitrate"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="600" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/watermark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_bitrate"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="水印图片路径: " />
+
+            <EditText
+                android:id="@+id/watermark_path"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="assets://Alivc/wartermark/logo.png" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="marginX : " />
+
+                    <EditText
+                        android:id="@+id/dx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="marginY : " />
+
+                    <EditText
+                        android:id="@+id/dy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="14" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="水印位置 (上右 1, 上左 2, 下右 3, 下左 4) : " />
+
+                    <EditText
+                        android:id="@+id/site"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
