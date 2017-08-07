@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:text="请输入rtmp服务器的地址"
+            android:text="@string/import_rtmp_address"
             android:textSize="16sp" />
 
         <EditText
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/rtmpUrl"
             android:layout_marginTop="10dp"
-            android:text="准备直播" />
+            android:text="@string/prepare_live" />
 
         <RadioGroup
             android:id="@+id/resolution_group"
@@ -45,42 +45,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="24P" />
+                android:text="@string/_240p" />
 
             <RadioButton
                 android:id="@+id/radiobutton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="36P" />
+                android:text="@string/_360p" />
 
             <RadioButton
                 android:id="@+id/radiobutton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
-                android:text="48P" />
+                android:text="@string/_480p" />
 
             <RadioButton
                 android:id="@+id/radiobutton3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
-                android:text="54P" />
+                android:text="@string/_540p" />
 
             <RadioButton
                 android:id="@+id/radiobutton4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
-                android:text="72P" />
+                android:text="@string/_720p" />
 
             <RadioButton
                 android:id="@+id/radiobutton5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
-                android:text="108P" />
+                android:text="@string/_1080p" />
         </RadioGroup>
 
         <RadioGroup
@@ -95,14 +95,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
-                android:text="横屏" />
+                android:text="@string/landscape" />
 
             <RadioButton
                 android:id="@+id/screenOrientation2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="竖屏" />
+                android:text="@string/portrait_screen" />
         </RadioGroup>
 
         <LinearLayout
@@ -116,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="前置摄像头镜像" />
+                android:text="@string/preposition_camera" />
 
         </LinearLayout>
 
@@ -131,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="帧率" />
+                android:text="@string/frame_rate" />
 
             <EditText
                 android:id="@+id/et_frame_rate"
@@ -139,9 +139,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
-                android:hint="帧率必须是0~30之间"
+                android:hint="@string/frame_rate_0_30"
                 android:inputType="number"
-                android:text="30" />
+                android:text="@string/_30" />
         </LinearLayout>
 
         <LinearLayout
@@ -156,40 +156,40 @@
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="min bitrate"
+                android:hint="@string/min_bitrate"
                 android:inputType="number"
-                android:singleLine="true"
-                android:text="500" />
+                android:maxLines="1"
+                android:text="@string/_500" />
 
             <EditText
                 android:id="@+id/et_max_bitrate"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="max bitrate"
+                android:hint="@string/max_bitrate"
                 android:inputType="number"
-                android:singleLine="true"
-                android:text="800" />
+                android:maxLines="1"
+                android:text="@string/_800" />
 
             <EditText
                 android:id="@+id/et_best_bitrate"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="best bitrate"
+                android:hint="@string/best_bitrate"
                 android:inputType="number"
-                android:singleLine="true"
-                android:text="600" />
+                android:maxLines="1"
+                android:text="@string/_600" />
 
             <EditText
                 android:id="@+id/et_init_bitrate"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="initial bitrate"
+                android:hint="@string/initial_bitrate"
                 android:inputType="number"
-                android:singleLine="true"
-                android:text="600" />
+                android:maxLines="1"
+                android:text="@string/_600" />
         </LinearLayout>
 
 
@@ -203,13 +203,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="水印图片路径: " />
+                android:text="@string/watermark_image_url" />
 
             <EditText
                 android:id="@+id/watermark_path"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="assets://Alivc/wartermark/logo.png" />
+                android:text="@string/assets_alivc_wartermark_logo_png" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -224,13 +224,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="marginX : " />
+                        android:text="@string/marginx" />
 
                     <EditText
                         android:id="@+id/dx"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="14" />
+                        android:text="@string/_14" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -241,13 +241,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="marginY : " />
+                        android:text="@string/marginy" />
 
                     <EditText
                         android:id="@+id/dy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="14" />
+                        android:text="@string/_14" />
                 </LinearLayout>
 
 
@@ -258,13 +258,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="水印位置 (上右 1, 上左 2, 下右 3, 下左 4) : " />
+                        android:text="@string/watermark_position" />
 
                     <EditText
                         android:id="@+id/site"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="1" />
+                        android:text="@string/_1" />
                 </LinearLayout>
 
             </LinearLayout>

@@ -104,6 +104,6 @@ public class PlugFlowConfigBuilder {
         intent.putExtra(StringFlag.INIT_BITRATE, initBitrate);
         intent.putExtra(StringFlag.FRAME_RATE, frameRate);
 
-        return new Intent();
+        return intent;
     }
 }

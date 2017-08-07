@@ -37,7 +37,7 @@ public class AdvancedSettingDialog extends DialogFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mBeautyLevelView = (Spinner) view.findViewById(R.id.spinner_beauty_level);
+        mBeautyLevelView = view.findViewById(R.id.spinner_beauty_level);
         mBeautyLevelView.setOnItemSelectedListener(new BeautyLevelSelectListener());
     }
 
